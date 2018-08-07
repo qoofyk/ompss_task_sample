@@ -4,7 +4,7 @@ CONFIG_DIR=.config
 GFLAGS=
 
 PARAVER=extrae.xml trace.sh
-SCRIPTS=run-once.sh multirun.sh
+#SCRIPTS=run-once.sh multirun.sh
 
 MPI_CHECK=$(MPI_LIB_DIR)/libmpi.so
 MKL_CHECK=$(MKL_LIB_DIR)/libmkl_sequential.so
@@ -18,10 +18,10 @@ extrae.xml:
 trace.sh:
 	cp $(COMMON_DIR)/trace.sh .
 
-run-once.sh: $(COMMON_DIR)/run-once.sh $(CONFIG_DIR)/run-once.sh
-	cp  $(COMMON_DIR)/run-once.sh .
-	cat $(COMMON_DIR)/sched-job$(JOB_SCHED_VERSION) >> run-once.sh
-	cat $(CONFIG_DIR)/run-once.sh >> run-once.sh
+#run-once.sh: $(COMMON_DIR)/run-once.sh $(CONFIG_DIR)/run-once.sh
+	#cp  $(COMMON_DIR)/run-once.sh .
+	#cat $(COMMON_DIR)/sched-job$(JOB_SCHED_VERSION) >> run-once.sh
+	#cat $(CONFIG_DIR)/run-once.sh >> run-once.sh
 
 multirun.sh: $(COMMON_DIR)/multirun.sh $(CONFIG_DIR)/multirun.sh
 	cp  $(COMMON_DIR)/multirun.sh .
